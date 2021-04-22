@@ -1,24 +1,28 @@
-# lasia_ui
+# Lasia_ui
 
-## Project setup
-```
-npm install
-```
+LasiaUI is a Neumorphism Style UI component library based on Vue 2
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## Install
+
+```shell
+npm i lasia-ui
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+## Quick Start
+
+```javaScript
+// main.js
+import Vue from 'vue'
+import LasiaUI from 'lasia-ui'
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(LasiaUI)
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Example
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```Html
+<Template>
+    <ls-button round>Hi Lasia</ls-button>
+</Template>
+```
