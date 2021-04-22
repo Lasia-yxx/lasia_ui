@@ -1,0 +1,37 @@
+@import "../common/variable.less";
+
+.ls-button {
+  padding: 15px 20px;
+  outline: none;
+  border: initial;
+  border-radius: 5px;
+  box-shadow: -5px -5px 20px @color-white, 5px 5px 20px @color-shadow;
+  cursor: pointer;
+  margin: 3px 5px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: -2px -2px 5px @color-white, 2px 2px 5px @color-shadow;
+  }
+
+  &:active {
+    box-shadow: inset 1px 1px 2px @color-shadow,
+      inset -1px -1px 2px @color-white;
+  }
+
+  &--medium {
+    padding: 13px 16px;
+  }
+
+  &--small {
+    padding: 10px 13px;
+  }
+
+  &--mini {
+    padding: 6px 9px;
+  }
+}
+
+.is-round {
+  border-radius: 9999px;
+}
