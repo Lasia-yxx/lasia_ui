@@ -2,9 +2,11 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 
-import demo from "../packages/index";
+import LasiaUI from "../packages/index";
+import "../packages/theme-chalk/index.less";
 // 注册组件库
-Vue.use(demo);
+Vue.use(LasiaUI);
+
 Vue.config.productionTip = false;
 
 new Vue({
