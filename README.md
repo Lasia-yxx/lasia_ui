@@ -14,7 +14,7 @@ npm i lasia-ui
 // main.js
 import Vue from 'vue'
 import LasiaUI from 'lasia-ui'
-import 'element-ui/lib/theme-chalk/index.css';
+import 'lasia-ui/lib/lasia-ui.css';
 
 Vue.use(LasiaUI)
 ```
