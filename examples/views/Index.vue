@@ -1,6 +1,7 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+  <div>
+    <h1>Lasia UI</h1>
+    <ls-button round>Hi Lasia</ls-button>
   </div>
 </template>
 
