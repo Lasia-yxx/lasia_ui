@@ -5,10 +5,13 @@
     :type="nativeType"
     :class="[
       size ? `ls-button--${size}` : '',
+      type ? `ls-button--${type}` : '',
       {
-        'is-round': round,
+        'ls-button-round': round,
+        'ls-button-disabled': disabled,
       },
     ]"
+    @click="handleClick"
   >
     <span v-if="$slots.default"><slot></slot></span>
   </button>
@@ -23,6 +26,12 @@ export default {
     nativeType: {
       type: String,
       default: "button",
+    },
+    type: String,
+  },
+  methods: {
+    handleClick(event) {
+      return this.$emit("click", event);
     },
   },
 };

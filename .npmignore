@@ -7,3 +7,5 @@ public/
 vue.config.js
 babel.config.js
 *.map
+doc.md
+logs.md

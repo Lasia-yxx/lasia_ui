@@ -1,6 +1,6 @@
 {
   "name": "lasia-ui",
-  "version": "1.0.4",
+  "version": "1.1.1",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -73,8 +73,8 @@
     "last 2 versions",
     "not dead"
   ],
-  "description": "## Project setup ``` npm install ```",
-  "main": "babel.config.js",
+  "description": "LasiaUI is a Neumorphism Style UI component library based on Vue 2",
+  "main": "lib/lasia-ui.umd.min.js",
   "directories": {
     "example": "examples"
   }
