@@ -419,3 +419,51 @@
       legalValue: 'Number or String data',
     }
     ```
+
+## Card
+
+容器组件，为页面提供符合整体风格的容器，可以理解为 _container_。
+
+- Start：
+
+  ```html
+  <ls-card>
+    <any-component></any-component>
+  </ls-card>
+  ```
+
+- Call Even：
+
+  Nothing
+
+- API：
+
+  - round：
+
+    用于控制 `Card` 组件的边角弧度，当 _round_ 值为 `True` 时，按钮为椭圆边角。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'round',
+      type: Boolean,
+      required: false,
+      default: false,
+      legalValue: [false, true],
+    }
+    ```
+
+  - foucs：
+
+    用于控制 `Card` 组建的阴影样式，当 _foucs_ 的值为 `True` 时，阴影呈现一种内凹的感觉。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'focus',
+      type: Boolean,
+      required: false,
+      default: false,
+      legalValue: [false, true],
+    }
+    ```
