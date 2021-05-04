@@ -2,9 +2,9 @@
 
 LasiaUI is a Neumorphism Style UI component library based on Vue 2
 
-[Basic Document](https://github.com/Lasia-yxx/lasia_ui)
+[Basic Document](https://github.com/Lasia-yxx/lasia_ui/blob/main/doc.md)
 
-[Bug Report](https://github.com/Lasia-yxx/lasia_ui/blob/main/doc.md)
+[Bug Report](https://github.com/Lasia-yxx/lasia_ui/issues)
 
 ## Install
 
