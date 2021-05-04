@@ -17,6 +17,10 @@
 }
 
 .box-shadow-container {
-  box-shadow: -12px -12px 24px rgba(255, 255, 255, 0.6),
-    12px 12px 24px rgba(0, 6, 39, 0.1);
+  box-shadow: -12px -12px 24px @color-light, 12px 12px 24px rgba(0, 6, 39, 0.1);
+}
+
+.box-shadow-container-foucs {
+  box-shadow: 2px 2px 4px 0px @color-shadow inset,
+    -2px -2px 4px 0px @color-white inset;
 }
