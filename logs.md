@@ -38,8 +38,20 @@
 
 ## 2021.05.03
 
+新增 `Card` 组件，作为同风格容器
+
 - Card：
 
   - Feature：
 
     新增 `Card` 组件。
+
+## 2021.05.08
+
+新增 `Toggle` 组件，用于选项的勾选。
+
+- Toggle
+
+  - Feature：
+
+    新增 `Toggle` 组件。

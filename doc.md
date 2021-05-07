@@ -432,7 +432,7 @@
   </ls-card>
   ```
 
-- Call Even：
+- Call Event：
 
   Nothing
 
@@ -465,5 +465,110 @@
       required: false,
       default: false,
       legalValue: [false, true],
+    }
+    ```
+
+## Toggle
+
+勾选框组件，用于在二选一的场景中进行选择。
+
+- Start：
+
+  ```html
+  <ls-toggle v-model="value"></ls-toggle>
+  <script>
+    export default {
+      data() {
+        return {
+          value: false,
+        };
+      },
+    };
+  </script>
+  ```
+
+- Call Event：
+
+  - change：
+
+    `Toggle` 组件提供 _onChange_ 事件，`Toggle` 组件发生改变时触发事件，事件返回当前 `Toggle` 的状态。
+
+    ```html
+    <ls-toggle v-model="value" @change="handleChange"></ls-toggle>
+    <script>
+      export default {
+        data() {
+          return {
+            value: false,
+          };
+        },
+        methods: {
+          handleChange(val) {
+            console.log(val); // Toggle 组件状态值
+          },
+        },
+      };
+    </script>
+    ```
+
+- API：
+
+  - value：
+
+    `Toggle` 组件的状态值，为布尔值，使用 `v-model` 进行动态绑定。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'value',
+      type: Boolean,
+      required: true,
+      default: false,
+      legalValue: [false, true],
+    }
+    ```
+
+  - size：
+
+    此属性用于设置 `Toggle` 组件的大小，若未赋值则默认为最大尺寸。
+
+    ```javaScript
+    // Attribute
+    {
+     apiName: 'size',
+     type: String,
+     required: false,
+     default: false,
+     legalValue: ['medium', 'small'],
+    }
+    ```
+
+  - activeText：
+
+    此属性用于设置 `Toggle` 组件激活状态的文字描述。
+
+    ```javaScript
+    // Attribute
+    {
+     apiName: 'activeText',
+     type: String,
+     required: false,
+     default: false,
+     legalValue: 'String',
+    }
+    ```
+
+  - inactiveText
+
+    此属性用于设置 `Toggle` 组件未激活状态的文字描述。
+
+    ```javaScript
+    // Attribute
+    {
+     apiName: 'inactiveText',
+     type: String,
+     required: false,
+     default: false,
+     legalValue: 'String',
     }
     ```
