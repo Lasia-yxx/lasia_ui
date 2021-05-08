@@ -8,7 +8,7 @@
       },
       `ls-toggle--${size}`,
     ]"
-    @click="handleChange"
+    @click="handleClick"
   >
     <span class="ls-toggle-inactive-text">{{ inactiveText }}</span>
     <div class="dot-container">
@@ -27,9 +27,16 @@ export default {
     activeText: String,
     inactiveText: String,
   },
-
+  watch: {
+    value: {
+      immediate: false,
+      handler(newVal) {
+        this.$emit("change", newVal);
+      },
+    },
+  },
   methods: {
-    handleChange() {
+    handleClick() {
       this.$emit("input", !this.value);
     },
   },

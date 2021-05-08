@@ -572,3 +572,123 @@
      legalValue: 'String',
     }
     ```
+
+## Switch
+
+开关组件，功能近似于 `Toggle` 组件，用于是否选择，更类似于 `Checkbox`。
+
+- Start：
+
+  ```html
+  <ls-switch v-model="value"></ls-switch>
+  <script>
+    export default {
+      data() {
+        return {
+          value: false,
+        };
+      },
+    };
+  </script>
+  ```
+
+- Call Event：
+
+  - change：
+
+    `Switch` 组件提供 _onChange_ 事件，`Switch` 组件发生改变时触发事件，事件返回当前 `Switch` 的状态。
+
+    ```html
+    <ls-switch v-model="value" @change="handleChange"></ls-switch>
+    <script>
+      export default {
+        data() {
+          return {
+            value: false,
+          };
+        },
+        methods: {
+          handleChange(val) {
+            console.log(val); // Switch 组件状态值
+          },
+        },
+      };
+    </script>
+    ```
+
+- API：
+
+  - value：
+
+    `Switch` 组件的状态值，为布尔值，使用 `v-model` 进行动态绑定。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'value',
+      type: Boolean,
+      required: true,
+      default: false,
+      legalValue: [false, true],
+    }
+    ```
+
+  - size：
+
+    此属性用于设置 `Switch` 组件的大小，若未赋值则默认为最大尺寸。
+
+    ```javaScript
+    // Attribute
+    {
+     apiName: 'size',
+     type: String,
+     required: false,
+     default: false,
+     legalValue: ['medium', 'small', 'mini'],
+    }
+    ```
+
+  - round：
+
+    此属性用于设置 `Switch` 组件是否为椭圆边角，当 _round_ 值为 `True` 时，为椭圆形边角。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'round',
+      type: Boolean,
+      required: false,
+      default: false,
+      legalValue: [true, false],
+    }
+    ```
+
+  - type：
+
+    此属性用于设置 `Switch` 组件在激活时的样式，不同的值对应着不同的使用场景，可以参考 [`Button`](##Button) 组件的 _type_ 属性
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'type',
+      type: String,
+      required: false,
+      default: 'primary',
+      legalValue: ['primary','warning','success']
+    }
+    ```
+
+  - disabled：
+
+    此属性用于设置 `Switch` 是否被禁用，若 _disabled_ 的值为 `True` 则 `Switch` 组件无法触发事件。同样类似于 [`Button`](##Button) 组建的 _disabled_ 属性。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'disabled',
+      type: Boolean,
+      required: false,
+      default: false,
+      legalValue: [false, true],
+    }
+    ```

@@ -46,12 +46,28 @@
 
     新增 `Card` 组件。
 
-## 2021.05.08
+## 2021.05.07
 
 新增 `Toggle` 组件，用于选项的勾选。
 
-- Toggle
+- Toggle：
 
   - Feature：
 
     新增 `Toggle` 组件。
+
+## 2021.05.08
+
+新增 `Switch` 组件，类似开关按钮。修复 `Toggle` 组件未定义 _onChange_ 回调事件。
+
+- Toggle：
+
+  - Fix：
+
+    修复未定义 _onChange_ 回调事件。
+
+- Switch：
+
+  - Feature：
+
+    新增 `Switch` 组件。
