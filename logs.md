@@ -71,3 +71,24 @@
   - Feature：
 
     新增 `Switch` 组件。
+
+## 2021.05.11
+
+新增 `Progress` 组件，用于展示工作进度。
+
+- Progress：
+
+  - Feature：
+
+  新增 `Progress` 组件
+
+  ```html
+  <ls-progress :percentage="value"></ls-progress>
+  <script>
+    export default{
+      data(){
+        value:15,
+      }
+    }
+  </script>
+  ```

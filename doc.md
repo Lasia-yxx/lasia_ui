@@ -692,3 +692,131 @@
       legalValue: [false, true],
     }
     ```
+
+## Progress
+
+进度条组件，用于展示工作进度。由圆形和线形两种类型
+
+- Start：
+
+  ```html
+  <ls-progress :percentage="value"></ls-progress>
+  <script>
+    export default{
+      data(){
+        value:15,
+      }
+    }
+  </script>
+  ```
+
+- Call Event：
+
+  Nothing
+
+- API：
+
+  - percentage：
+
+    `Progress` 组件的进度值，为 _0-100_ 的数字，用于以百分比的形式展示当前进度状态。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'percentage',
+      type: Number,
+      required: true,
+      default: false,
+      legalValue: [0-100],
+    }
+    ```
+
+  - width：
+
+    `Progress` 组件的宽度值，用于指定组件圆形状态下的直径或线条状态下的长度
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'width',
+      type: Number,
+      required: false,
+      default: 108,
+      legalValue: 'Number',
+    }
+    ```
+
+  - trackWidth：
+
+    用于设置组件在圆形状态下进度条的宽度。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'trackWidth',
+      type: Number,
+      required: false,
+      default: 8,
+      legalValue: 'Number',
+    }
+    ```
+
+  - color：
+
+    用于设置组件在圆形状态下进度条的宽度。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'color',
+      type: String,
+      required: false,
+      default: '#ffaaaa',
+      legalValue: 'String',
+    }
+    ```
+
+  - size：
+
+    用于设置进度条的颜色。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'size',
+      type: String,
+      required: false,
+      default: false,
+      legalValue: ['medium', 'small', 'mini'],
+    }
+    ```
+
+  - round：
+
+    用于设置 `Progress` 组件是否时圆形类型，默认为线条状态。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'round',
+      type: Boolean,
+      required: false,
+      default: false,
+      legalValue: [false, true],
+    }
+    ```
+
+  - showProgress：
+
+    用于设置 `Progress` 组件是否展示当前进度信息。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'showProgress',
+      type: Boolean,
+      required: false,
+      default: false,
+      legalValue: [false, true],
+    }
+    ```
