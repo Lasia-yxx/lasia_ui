@@ -695,7 +695,7 @@
 
 ## Progress
 
-进度条组件，用于展示工作进度。由圆形和线形两种类型
+进度条组件，用于展示工作进度。有圆形和线形两种类型
 
 - Start：
 
@@ -818,5 +818,93 @@
       required: false,
       default: false,
       legalValue: [false, true],
+    }
+    ```
+
+## Checkbox
+
+勾选框组件，用于勾选选项。
+
+- Start：
+
+  ```html
+  <ls-checkbox v-model="value"></ls-checkbox>
+  <script>
+    export default{
+      data(){
+        value:false,
+      }
+    }
+  </script>
+  ```
+
+- Call Event
+
+  - change：
+
+    `Checkbox` 组件提供 _onChange_ 事件，`Checkbox` 组件发生改变时触发事件，事件返回当前 `Checkbox` 的状态。
+
+    ```html
+    <ls-checkbox v-model="value" @change="handleChange"></ls-checkbox>
+    <script>
+      export default {
+        data() {
+          return {
+            value: false,
+          };
+        },
+        methods: {
+          handleChange(val) {
+            console.log(val); // Checkbox 组件状态值
+          },
+        },
+      };
+    </script>
+    ```
+
+- API：
+
+  - color：
+
+    `Checkbox` 激活状态时的颜色值，默认为主题色 `#ffaaaa`。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'color',
+      type: String,
+      required: false,
+      default: '#ffaaaa',
+      legalValue: 'String',
+    }
+    ```
+
+  - value：
+
+    `Checkbox` 组件的状态值，为布尔值，使用 `v-model` 进行动态绑定。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'value',
+      type: Boolean,
+      required: true,
+      default: false,
+      legalValue: [false, true]
+    }
+    ```
+
+  - disabled：
+
+    用于表示 `checkbox` 组件是否禁用，如果值为 `True` 的话，则组件被禁用。
+
+    ```javaScript
+    // Attribute
+    {
+      apiName: 'disabled',
+      type: Boolean,
+      required: false,
+      default: false,
+      legalValue: [false, true,]
     }
     ```
