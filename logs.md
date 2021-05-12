@@ -95,7 +95,7 @@
 
 ## 2021.05.12
 
-新增 `Checkbox` 组件，用于选项勾选。
+新增 `Checkbox` 组件，用于选项勾选。修复 Issues `#12` 中 `Toggle` 组件的样式问题。
 
 - Checkbox：
 
@@ -113,3 +113,9 @@
       };
     </script>
     ```
+
+- Toggle：
+
+  - Fix：
+
+    修复 Issues `#12` 中的样式问题， 为 `Toggle` 新增了样式 `margin: 0 10px`。
