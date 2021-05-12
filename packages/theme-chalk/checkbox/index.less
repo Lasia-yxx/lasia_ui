@@ -1,0 +1,73 @@
+@import "../common/variable.less";
+@import "../common/transition.less";
+
+.ls-checkbox-wrapper {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 2px;
+  outline: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+
+  &--disabled {
+    cursor: not-allowed;
+  }
+
+  .ls-checkbox {
+    width: 35px;
+    height: 35px;
+    outline: none;
+    border: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: currentColor;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+      -7px -7px 20px rgb(255, 255, 255),
+      inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+      inset 7px 7px 15px rgba(55, 84, 170, 0),
+      inset -7px -7px 20px rgba(75, 74, 74, 0),
+      0px 0px 4px rgb(255, 255, 255, 0);
+    cursor: pointer;
+    .ease-in-out-quick;
+
+    &--disabled {
+      cursor: not-allowed;
+    }
+
+    &--active {
+      box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+        -7px -7px 20px rgb(255, 255, 255),
+        inset 0px 0px 4px rgba(255, 255, 255, 0),
+        inset 7px 7px 15px rgba(55, 84, 170, 0.15),
+        inset -7px -7px 20px rgb(255, 255, 255),
+        0px 0px 4px rgba(255, 255, 255, 0.2);
+    }
+
+    &-active {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 2px solid @info-color;
+      .ease-in-out-quick;
+
+      &--active {
+        background-color: currentColor;
+        border: 2px solid currentColor;
+      }
+    }
+  }
+
+  .ls-checkbox-label {
+    color: @default-color;
+    margin-left: 3px;
+    .ease-in-out-quick;
+
+    &--active {
+      color: currentColor;
+    }
+  }
+}

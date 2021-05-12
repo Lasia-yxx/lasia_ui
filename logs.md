@@ -13,7 +13,7 @@
     ```html
     <ls-button @onClick="handleClick">Hi Lasia</ls-button>
     <script>
-      onClick(event){
+      onClick(event) {
         console.log(event)
       }
     </script>
@@ -28,7 +28,7 @@
     ```html
     <ls-input v-model="value"></ls-input>
     <script>
-      export default{
+      export default {
         data(){
           value:'',
         }
@@ -80,15 +80,36 @@
 
   - Feature：
 
-  新增 `Progress` 组件
+    新增 `Progress` 组件
 
-  ```html
-  <ls-progress :percentage="value"></ls-progress>
-  <script>
-    export default{
-      data(){
-        value:15,
+    ```html
+    <ls-progress :percentage="value"></ls-progress>
+    <script>
+      export default {
+        data(){
+          value:15,
+        }
       }
-    }
-  </script>
-  ```
+    </script>
+    ```
+
+## 2021.05.12
+
+新增 `Checkbox` 组件，用于选项勾选。
+
+- Checkbox：
+
+  - Feature：
+
+    新增 `Checkbox` 组件。
+
+    ```html
+    <ls-checkbox v-model="values"></ls-checkbox>
+    <script>
+      export default {
+        data() {
+          values: false;
+        },
+      };
+    </script>
+    ```
