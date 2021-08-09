@@ -1,13 +1,10 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import Router from './router';
-import { create, NButton } from 'naive-ui';
-
-import 'vfonts/Lato.css';
-import 'vfonts/FiraCode.css';
+import { create, NButton, NModal, NCard, NInput } from 'naive-ui';
 
 const NaiveUI = create({
-  components: [NButton],
+  components: [NButton, NModal, NCard, NInput],
 });
 
 const app = createApp(App);

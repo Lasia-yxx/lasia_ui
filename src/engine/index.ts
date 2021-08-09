@@ -1,12 +1,19 @@
 import Api from '../api';
+import { AuthorInfo } from '../type/author';
 
 class Blog {
   static getTestData = async () => {
-    const params = {
-      name: 'lasia',
-      age: 18,
-    };
-    const data: any = await Api.post('test/testData', params);
+    const data: any = await Api.post('test/testData');
+    return data;
+  };
+
+  static fetchAuthor = async (): Promise<AuthorInfo> => {
+    const data: AuthorInfo = await Api.get('author/fetchAuthor');
+    return data;
+  };
+
+  static fetchTest = async () => {
+    const { data } = await Api.get('test/fetchAuthor');
     return data;
   };
 }

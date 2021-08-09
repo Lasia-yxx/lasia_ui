@@ -1,7 +1,7 @@
 import { Service } from '../ulits/index';
 
 class Api {
-  static post = (url: string, data = {}) => {
+  static post = (url: string, data = {}): any => {
     return Service.request({
       method: 'POST',
       url,
@@ -9,7 +9,7 @@ class Api {
     });
   };
 
-  static get = (url: string, params = {}) => {
+  static get = (url: string, params = {}): any => {
     return Service.request({
       method: 'GET',
       url,
