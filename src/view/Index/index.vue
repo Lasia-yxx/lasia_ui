@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <div class="index-container">
     <div class="user-wrapper">
-      <img :src="avatar" class="avatar">
-      <div class="name">{{ name }}</div>
+      <img :src="state.authorInfo.avatar" class="avatar">
+      <div class="name">{{ state.authorInfo.name }}</div>
       <div class="function-cotnainer">
-        <n-button class="button" type="primary">Let's Go!</n-button>
+        <n-button class="button" type="primary" @click="onEnterHome">Let's Go!</n-button>
         <n-button class="button" type="info" @click="isShowModel = true">吐槽一下</n-button>
       </div>
     </div>
@@ -34,7 +34,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Blog from '../../engine';
 
 export default defineComponent({
   name: 'index',
@@ -44,24 +43,25 @@ export default defineComponent({
       name: '',
       isShowModel: false,
       comment: '',
+      state: this.$Store.state,
     };
   },
-  async mounted() {
-    const { name, avatar } = await Blog.fetchAuthor();
-    this.name = name;
-    this.avatar = avatar;
+  methods: {
+    onEnterHome() {
+      this.$router.push({ name: 'Article' });
+    },
   },
 });
 </script>
 
 <style scoped>
-.container {
+.index-container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  text-align: center;
 }
 
 .avatar {
